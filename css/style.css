@@ -5,7 +5,7 @@
 
 
 
-    
+    @media screen and (min-width: 881px) {
 
 
     /**algunos tamaños y colores para las paginas en general**/
@@ -37,7 +37,7 @@ header, footer{
       list-style-type: none;justify-content: right;display: inline-flex;
 }
 .m{
-     border: solid 1px cyan; border-radius: 10px;margin: 10px;justify-content: right;height: 20px;width: max-content;
+     border: solid 1px cyan; border-radius: 10px;margin: 10px;justify-content: right;height: 30px;width: max-content;
 }
 .m a, .title a, .n a,.boton a { text-decoration: none; color: black;}
 
@@ -227,14 +227,17 @@ margin: 15px;padding: 5px;list-style-type: none;}
 .botones input{
     background-color: whitesmoke; border:  solid 1px cyan;border-radius: 20px; 
 }
-
+}
 
 /** responsive desing**/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
     
 body{
     background-image: url(../assestmenst/image/portada/00-office-for-design.jpg); margin: 10px;
+}
+header{
+    color: black;
 }
 h1{text-align: center;font-style: oblique;color: white;}
 
