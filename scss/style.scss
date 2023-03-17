@@ -2,15 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: 0}
+    @import url('https://fonts.googleapis.com/css2? familia= Akaya+Telivigala &familia= Sono:peso@300 &family= Space+Grotesk & display=swap')
+;
 
+@mixin color-background-border{
+        color: whitesmoke;
+        background-color: rgb(0, 174, 255);
+        border-radius: 30px;
+        
+    }
+
+    
 
 
     @media screen and (min-width: 881px) {
 
 
     /**algunos tamaños y colores para las paginas en general**/
-    .noticias, section{ background-color: #dfc686;}
-    h1{text-align: center;font-style: oblique;color: white;}
+    
+    .noticias, section{ background-color:whitesmoke;}
+    h1{text-align: center;font-style: oblique; font-family: 'Sono', sans-serif;color: white;}
     h1 {
         animation-duration: 4s;
         animation-name: aparecer;
@@ -37,6 +48,8 @@
     a:hover{ background-color: rgba(0, 125, 184, 0.308); border-radius: 20px; font-size: 20px;}
     .navegacion_movile{ display: none;}
 .piemovile{ display: none;}
+
+
     
 
 
@@ -59,19 +72,29 @@ header, footer{
 }
 .navegacion_movile{ display: none;}
 .piemovile{ display: none;}
-.menu, .pie{
+
+.pie{
     display: flex; justify-content: space-evenly; padding:0px 15px;}
-.barra{
-      list-style-type: none;justify-content: right;display: inline-flex;
+
+/** anidacion sass**/
+.menu {
+    display: flex; justify-content: space-evenly; padding:0px 15px;
+    .title{justify-content: left; font-size: 40px; font-style: oblique; font-family:'Akaya Telivigala', cursiva;;}
+    .barra{
+      list-style-type: none;justify-content: right;display: inline-flex; 
+        .m{
+     border: solid 1px cyan; border-radius: 10px;margin: 10px;justify-content: right;height: 30px;width: max-content;}
+    }
 }
-.m{
-     border: solid 1px cyan; border-radius: 10px;margin: 10px;justify-content: right;height: 30px;width: max-content;
-}
+
+
+
 .m a, .title a, .n a,.boton a { text-decoration: none; color: black;}
 
-.title{justify-content: left; font-size: 40px; font-style: oblique; }
+
 
 .p{ flex-direction: column;}
+
 
 
 /**diseño del cuerpo en las paginas**/
@@ -119,11 +142,11 @@ body{
 }
 
 .diseño{
-    justify-content: center;text-align: center; margin: 20px; border: solid ;background-color: #dfc686;
+    justify-content: center;text-align: center; margin: 20px; border: solid ;background-color: whitesmoke;
 }
 
 .historia, .td{
-    text-align: center; font-size: 17px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px 50px 20px 50px; ; 
+    text-align: center; font-size: 17px;font-family: 'Space Grotesk', sans-serif; padding: 20px 50px 20px 50px; ; 
 }
 .td{ background-color: aliceblue;width: 80%;margin-left: 80px;}
 .historiad{
@@ -188,10 +211,14 @@ body{
         }
      }
 
+.boton{
+    @include color-background-border
+}
+
 
 
 .escuelas_estudios{
-    text-align: center;font-family: Arial, Helvetica, sans-serif;border: solid 1px black; justify-content: center;background-color: #dfc686;
+    text-align: center;font-family: Arial, Helvetica, sans-serif;border: solid 1px black; justify-content: center;background-color: whitesmoke;
 margin: 15px;padding: 5px;list-style-type: none;}
 
 .es1 img, .es2 img, .academy1 img, .academy2 img{
@@ -215,7 +242,8 @@ margin: 15px;padding: 5px;list-style-type: none;}
     width: 50px;
     font-size: 60px;
     word-wrap: break-word;
-    background-color: aliceblue;
+    background-color: rgb(111, 207, 252);
+    font-family: 'Space Grotesk', sans-serif;;
     
 }
 .estudios, .es1, .es2{
@@ -246,7 +274,8 @@ margin: 15px;padding: 5px;list-style-type: none;}
     width: 50px;
     font-size: 45px;
     word-wrap: break-word;
-    background-color: aliceblue;
+    background-color: rgb(111, 207, 252);
+    font-family: 'Space Grotesk', sans-serif;
     
 }
 .academia, .academy1, .academy2{
@@ -281,10 +310,13 @@ margin: 15px;padding: 5px;list-style-type: none;}
 .mapa{
     height: 500px; width: 500px; margin: 25px;
 }
-.botones input{
-    background-color: whitesmoke; border:  solid 1px cyan;border-radius: 20px; 
-}
 
+
+
+
+.botons--enviar, .botons--cancelar{
+    @include color-background-border
+}
 }
 
 /** responsive desing**/
@@ -393,16 +425,16 @@ footer{
 }
 .td{ background-color: aliceblue;width: 80%;margin-left: 80px;}
 .historiad{
-    border: solid 1px;margin: 5px auto;  border-radius: 20px; background-color: aliceblue;
+    border: solid 1px;margin: 5px auto;  border-radius: 20px; background-color: aliceblue;;
 }
-.img1{ float:right; height: 250px; width: 300px;}
+.img1{ float:right; height: 250px; width: 35%;}
 .img2{ float: right;height: 200px; }
 
 .noticias{
-    display: flex; margin: 15px auto; width: 90%; border: solid rgb(0, 217, 255);; text-align: center;padding: 15px;justify-content: center; background-color: aliceblue;
+     margin: 15px auto; width: 90%; border: solid rgb(0, 217, 255);; text-align: center;padding: 15px;justify-content: center; background-color: aliceblue;
 }
 
-.n p{ border-right:solid 1px; margin: 10px 50px; text-decoration: none;text-align: center; background-color: aliceblue;}
+.n p{ border-bottom:solid 1px; margin: 10px 50px; text-decoration: none;text-align: center; background-color: aliceblue;}
 .n iframe{ width: 180px; height: 40%; margin: auto;}
 
 
@@ -487,7 +519,7 @@ margin: 15px;padding: 5px;list-style-type: none;}
     margin: auto 20px;margin-bottom: 30px;
 }
 
-.formulario{display: inline-block;
+.formulario{display: inline-block; overflow-x: hidden;
 }
 
 .encuesta{
@@ -498,7 +530,7 @@ margin: 15px;padding: 5px;list-style-type: none;}
 }
 
 .mapa{
-    height: 300px; width: 400px; margin-left: 40px;
+    height: 300px; width: 350px; margin-left: 30px;
 }
 
 }
